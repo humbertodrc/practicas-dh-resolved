@@ -3,14 +3,15 @@
 import React from "react";
 import Loading from "../components/Loading";
 
-function LoadingHOC(WrappedComponent) {
-  function wrapper(characters) {
+function LoadingHOC(WrappedComponent: any) {
+  function wrapper(props: any) {
+    console.log(props);
     return (
       <>
-        {characters.length === 0 ? (
+        {props.characters.length === 0 ? (
           <Loading />
         ) : (
-          <WrappedComponent {...characters} />
+          <WrappedComponent {...props} />
         )}
       </>
     );

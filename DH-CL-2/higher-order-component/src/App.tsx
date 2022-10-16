@@ -10,7 +10,7 @@ const App = () => {
       fetch("https://rickandmortyapi.com/api/character")
         .then((res) => res.json())
         .then((characters) => setCharacters(characters.results));
-    }, 1000);
+    }, 3000);
   }, []);
 
   return <CharacterList characters={characters} />;

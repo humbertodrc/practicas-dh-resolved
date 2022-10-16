@@ -9,6 +9,7 @@ export type CharacterProps = {
   characters: [];
 };
 
+
 const CharacterList = ({ characters }: CharacterProps) => {
   return (
     <section className="characters">
