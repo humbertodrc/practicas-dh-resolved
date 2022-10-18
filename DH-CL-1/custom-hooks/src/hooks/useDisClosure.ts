@@ -1,28 +1,27 @@
-import { useState } from 'react';
-
+import {useState} from "react";
 
 export const useDisClosure = () => {
+	const [isOpen, setIsOpen] = useState(false);
 
-  const [isOpen, setIsOpen] = useState(false);
+	const close = () => {
+		if (isOpen) {
+			setIsOpen(false);
+		}
+	};
 
-  const open = () => {
-    if(!isOpen) {
-      setIsOpen(true);
-    }
-  }
+	const open = () => {
+		if (!isOpen) {
+			setIsOpen(true);
+		}
+	};
 
-  const close = () => {
-    if(isOpen) {
-      setIsOpen(false);
-    }
-  }
+	// Opcional
+	// const togle = () => setIsOpen((prevState) => !prevState);
 
-  const togle = () => setIsOpen((prevState) => !prevState);
-
-  return {
-    isOpen,
-    open,
-    close,
-    togle,
-  }
-}
+	return {
+		isOpen,
+		open,
+		close,
+		// togle,
+	};
+};

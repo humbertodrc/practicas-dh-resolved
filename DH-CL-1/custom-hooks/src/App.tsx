@@ -24,8 +24,8 @@ export default function App() {
   //   setIsOpenModal(false);
   // }
 
-  const { isOpen: isOpenSidebar, close: closeSidebar, togle:openSidebar } = useDisClosure();
-  const { isOpen: isOpenModal, close: closeModal, togle:openModal } = useDisClosure();
+  const { isOpen: isOpenSidebar, close: closeSidebar, open:openSidebar } = useDisClosure();
+  const { isOpen: isOpenModal, close: closeModal, open:openModal } = useDisClosure();
 
   return (
     <div className="App">
